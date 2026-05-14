@@ -2,6 +2,7 @@ services:
   - type: web
     name: portfolio
     env: node
+    rootDir: .
     buildCommand: npm run build
     startCommand: serve -s build
     envVars:
