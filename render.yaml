@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: trialatportfolio
+    name: portfoliojoni
     env: node
     rootDir: .
     buildCommand: npm run build
