@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: portfolio
+    name: trialatportfolio
     env: node
     rootDir: .
     installCommand: npm install
