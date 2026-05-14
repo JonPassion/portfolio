@@ -2,13 +2,22 @@ import React from 'react';
 import { Mail } from 'lucide-react';
 import { Twitter } from 'lucide-react';
 import { Facebook } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 
 const socialLinks = [
-  
   { name: "Twitter", url: "https://twitter.com/", icon: Twitter },
   { name: "Facebook", url: "https://www.facebook.com/justcodeitnow", icon: Facebook },
-  { name: "Email", url: "mailto:jonipassion@gmail.com", icon: Mail }
+  { name: "LinkedIn", url: "https://linkedin.com/in/jonipassion", icon: Linkedin },
+  { name: "Instagram", url: "https://instagram.com/justcodeit", icon: Instagram },
+  { name: "Email", url: "mailto:justcodeit@gmail.com", icon: Mail }
+];
+
+const phoneNumbers = [
+  "+263784001850",
+  "+263786758100"
 ];
 
 const ContactSection = () => {
@@ -28,6 +37,20 @@ const ContactSection = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             Full-Stack Developer | MERN Stack | AI & Web Apps
           </p>
+
+          {/* Phone Numbers */}
+          <div className="flex flex-col space-y-2 mb-4">
+            {phoneNumbers.map((phone, index) => (
+              <a
+                key={index}
+                href={`tel:${phone}`}
+                className="flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                <span className="font-medium">{phone}</span>
+              </a>
+            ))}
+          </div>
 
           {/* Social Links */}
           <div className="flex space-x-4">
