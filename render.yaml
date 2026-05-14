@@ -3,6 +3,7 @@ services:
     name: portfolio
     env: node
     rootDir: .
+    installCommand: npm install
     buildCommand: npm run build
     startCommand: serve -s build
     envVars:
